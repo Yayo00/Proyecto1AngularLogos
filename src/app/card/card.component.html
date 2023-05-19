@@ -1,0 +1,18 @@
+<div class="card">
+    <img [src]="dataEntrada.imagen" alt=""> <!--Property binding: pasar una variable del ts al html por medio de un atributo-->
+    <div class="wrapper-text">
+        <div class="title">{{dataEntrada.titulo}}</div> <!--Variable-->
+        <div class="sub-title">{{dataEntrada.subtitulo}}</div>
+        <input type="text" name="textoRandom" id="" [(ngModel)]="textoRandom">
+        <p>{{textoRandom}}</p>
+
+        <!---
+          En two way binding la directiva ngModel mandará el valor hacia el ts y este
+          lo devolverá por medio de interpolación al html
+        -->
+    </div>
+
+    <button (click)="mostrarTexto()" [disabled]="inactivo">{{texto}}</button> <!--Event binding
+    desde el html al ts-->
+
+</div>

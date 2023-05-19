@@ -1,0 +1,9 @@
+<app-header></app-header> <!--Llamando al componente de header-->
+<!-- <app-slidebar></app-slidebar> -->
+<div class="grid">
+    <app-card [dataEntrada] = "card"  *ngFor="let card of arrayCards"></app-card> <!--Se va a iterar para cada card-->
+    <!--dataEntrada es la entrada que CardComponent tiene
+        para recibir toda la información por medio de @Input y este se manda,
+        hacia card.html, por defecto se está diciendo que dataEntrada tendra el valor de card
+    -->
+</div>
